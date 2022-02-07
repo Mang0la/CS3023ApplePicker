@@ -2,7 +2,7 @@
  * Created by: Thomas Nguyen
  * Date Created: 1/31/2022
  * 
- * Last Edited: 1/31/2022
+ * Last Edited: 2/7/2022
  * Last Edited by: Thomas Nguyen
  * 
  * Description: Apple despawn logic
@@ -23,6 +23,9 @@ public class Apple : MonoBehaviour
         if (transform.position.y < bottomY)
         {
             Destroy(this.gameObject);
+            ApplePicker aScript = Camera.main.GetComponent<ApplePicker>();
+            aScript.AppleDestroyed();
+
         }
     }
 }
